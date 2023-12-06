@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<body>
+
+
+<div class="container">
+  <h1 id="ganhador"></h1>
+  <h1>Clique na garrafa!</h1>
+    <!--<img id="garrafa" src="file:///android_asset/garrafa.png" onclick="giro()">-->
+    <img onclick="giro()" id='garrafa' src="file:///android_asset/garrafa.png" alt="">
+    <div id="myPlot" style="width:100vw;height: 100vw;"></div>
+    <a href="#" onclick="fecharJanela()">voltar</a>
+</div>
+
+<script>
+
+  const xArray = [];
+  const yArray = [];
+  
+  let nomes = window.Kodular.getWebViewString().split("#$#");
+  /*let nomes = "JoÃ£o Pedro#$#BBB#$#CCC#$#DDD#$#EEE#$#FFF#$#GGG#$#HHH#$#8".split("#$#");*/
+        const jogadores = [];
+        for (i=0; i<parseInt(nomes[8]); i++){
+          xArray.push(nomes[i]);
+          yArray.push(1)}
+  
+  const nomescerto = [xArray[0]]
+  for(i=xArray.length-1; i>0; i-=1){
+    nomescerto.push(xArray[i])
+  } 
+  
+  const layout = {showlegend: false, paper_bgcolor: "#00000000", margin: {"t": 0, "b": 0, "l": 0, "r": 0}, font: {
+      family: 'Sans-serif',
+      size: 60,
+      color: '#7f7f7f'
+    }};
+  
+  const data = [{labels:xArray, values:yArray, type:"pie", textinfo: "label",
+    insidetextorientation: "radial"}];
+  
+  Plotly.newPlot("myPlot", data, layout,{displayModeBar: false});
+  
+  function giro() {
+          let angulo = Math.floor((Math.random() * 3600) + 1);
+          let tempo = Math.floor((Math.random() * 5) + 1);
+          const imagem = document.getElementById("garrafa").style;
+          imagem.rotate=`${angulo}deg` ;
+          imagem.transition=`rotate ${tempo}s ease 0.5s`
+          setTimeout(function(){
+          let posgarrafa = angulo;
+          while (posgarrafa>360){
+            posgarrafa-=360
+          };
+          let ganhador = nomescerto[parseInt(posgarrafa/(360/xArray.length))]
+          document.getElementById("ganhador").innerHTML=ganhador
+          }, tempo*1000)
+        }
+
+      function fecharJanela(){
+        window.Kodular.setWebViewString('fechar')
+      }
+  </script>
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  body{background-image: url(file:///android_asset/fundo2.png);
+    background-color: #000000;
+    
+  }
+  .container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img{
+      height: 70vw;
+      width: 70vw;
+      position:absolute;
+      z-index: 1;
+      transition: rotate 2s ease 0.5s;
+  }
+  h1{
+    position: absolute;
+    top: 15%;
+    font-size: 6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: red 0px 0px 30px;
+    color: rgb(244, 244, 244);
+  }
+
+  #ganhador{
+    top: 7%
+  }
+
+  a{
+    color: white;
+    background-color: transparent;
+    border: solid 3px;
+    border-color: #aaaa;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 7px;
+    padding: 0 20px;
+    height: auto;
+    font-size: 4vh;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 7%;
+}
+
+</style>
+
+</body>
+</html>
