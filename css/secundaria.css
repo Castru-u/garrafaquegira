@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+}
+
+main{
+    background-image: url(../fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+    margin-top: 40px;
+    color: white;
+    font-size: 19px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.63) 0 0 20px;
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 250px;
+}
+
+select, option{
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.6 );
+    color: white;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: solid transparent;
+    font-weight: 900;
+    font-size: 19px;
+    width: max-content;
+    border-color: transparent;
+    border-radius: 10px;
+    margin-bottom: 70px;
+}
+
+input{
+    background-color: rgb(128,128,128,0.2);
+    padding: 5px;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: solid transparent;
+    font-weight: 900;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 7px;
+    color: white;
+    text-align: center;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.608);
+    text-align: center;
+}
+
+button{
+    background-image: linear-gradient(rgba(252, 184, 39),rgba(252, 184, 39),rgb(162, 118, 25));
+    font-size: 25px;
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(112, 10, 123);
+    font-weight: 900;
+    text-align: center;
+    border: solid rgb(111, 81, 17);
+    border-width: 1px 1px 3px 1px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 13px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: all .3s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#voltar {
+    position: absolute;
+    left: 20px;
+    bottom: 50px;
+}
+
+#proximo {
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+}

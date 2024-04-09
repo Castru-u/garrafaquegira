@@ -3,93 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/secundaria.css">
+    <title></title>
 </head>
-<style>
-
-*{
-    margin: 0;
-}
-
-main{
-    background-image: url(file:///android_asset/fundo2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-label{
-    margin-top: 40px;
-    color: white;
-    flex-wrap: wrap;
-    font-size: 19px;
-    font-weight: bolder;
-    text-align: center;
-    width: 250px;
-}
-
-select{
-    padding: 3px;
-    background-color: transparent;
-    color: white;
-    font-weight: bolder;
-    font-size: 19px;
-    width: max-content;
-    border-color: transparent;
-    margin-bottom: 70px;
-}
-
-input{
-    background-color: transparent;
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 18px;
-    margin-bottom: 7px;
-    color: white;
-}
-
-input::placeholder{
-    color: white;
-}
-
-a{
-    color: white;
-    background-color: transparent;
-    border: solid 3px;
-    border-color: #aaaa;
-    text-decoration: none;
-    font-weight: bolder;
-    border-radius: 7px;
-    padding: 0 20px;
-    height: auto;
-    font-size: 20px;
-    margin-top: 20px;
-}
-
-#voltar {
-    position: absolute;
-    left: 20px;
-    bottom: 50px;
-}
-
-#proximo {
-    position: absolute;
-    right: 20px;
-    bottom: 50px;
-}
-
-
-</style>
 <body>
     
     <main>
+        <form action="tela.html" method="get">
         <label for="qtd-jogadores">QUANTIDADE DE JOGADORES: </label>
-        <select name="qtd-jogadores" id="qtd-jogadores" onchange="verificarSelecao(this.value)">
+        <select id="qtd-jogadores" onchange="verificarSelecao(this.value)">
             <option value="8" >8</option>
             <option value="7" >7</option>
             <option value="6" >6</option>
@@ -99,6 +21,7 @@ a{
             <option value="2" >2</option>
         </select>
 
+    
     <input type="text" class="j1" id="o1" placeholder="Jogador 1">
     <input type="text" class="j1" id="o2" placeholder="Jogador 2">
     <input type="text" class="j1" id="o3" placeholder="Jogador 3">
@@ -108,54 +31,15 @@ a{
     <input type="text" class="j1" id="o7" placeholder="Jogador 7">
     <input type="text" class="j1" id="o8" placeholder="Jogador 8">
 
-    <a href="file:///android_asset/principal.html" id="voltar">voltar</a>
+    <input type="text" name="jogadores" id="jogadores" style="display: none;" value='jogador 1#$#jogador 2#$#jogador 3#$#jogador 4#$#jogador 5#$#jogador 6#$#jogador 7#$#jogador 8#$#8'>
+
+    <button type="button" id="voltar">voltar</button>
 
 
-    <a href="#" id="proximo" onclick="fecharJanela()">Próximo</a>
+    <button type="submit" id="proximo">Próximo</button>
+    </form>
 
     </main>
-
-<script>
-
-    function verificarSelecao(value) {
-        if(value<8){
-            document.getElementById('o8').style.display='none'
-        }else{document.getElementById('o8').style.display='block'}
-        if(value<7){
-            document.getElementById('o7').style.display='none'
-        }else{document.getElementById('o7').style.display='block'}
-        if(value<6){
-            document.getElementById('o6').style.display='none'
-        }else{document.getElementById('o6').style.display='block'}
-        if(value<5){
-            document.getElementById('o5').style.display='none'
-        }else{document.getElementById('o5').style.display='block'}
-        if(value<4){
-            document.getElementById('o4').style.display='none'
-        }else{document.getElementById('o4').style.display='block'}
-        if(value<3){
-            document.getElementById('o3').style.display='none'
-        }else{document.getElementById('o3').style.display='block'}
-        }
-
-    function fecharJanela() {
-    let jogadores = document.getElementsByClassName('j1')
-    let mensagem = ''
-
-    for(i=0; i<jogadores.length;i++){
-        if(jogadores[i].value.length==0){
-            mensagem+=`jogador${i+1}#$#`
-        }else{
-        mensagem+=jogadores[i].value+'#$#'}
-    }
-    mensagem+=document.getElementById('qtd-jogadores').value
-
-
-    window.Kodular.setWebViewString(mensagem);
-
-
-
-}
-    </script>
+    <script src="secundaria.js"></script>
 </body>
 </html>

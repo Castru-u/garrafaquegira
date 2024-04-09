@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+#telaprincipal {
+    flex: 1 1 100vw;
+    background-image:url(../fundo.teste.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position:absolute;
+    top: 0;
+}
+
+header{
+    width: 0%;
+    height: 20px;
+    background-color: gray;
+    transition: 5s;
+}
+
+#pergunta{
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    box-shadow: rgba(252, 184, 39, 0.866) 3px 6px 0px;
+    margin-bottom: 50px;
+    color: purple;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.box-questoes {
+    height: auto;
+    width: 90vw;
+    flex-wrap: wrap;
+    border-radius: 20px;    
+    padding: 30px;
+}
+
+#popup{
+    display: none;
+    width: 100%;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+
+#buttons-resposta{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    background: rgba(252, 184, 39, 0.866);
+    box-shadow: white 2px 4px 0px;
+    font-size: 19px;
+    border-color: transparent;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+    transition: all .3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(112, 10, 123);
+    font-weight: 600;
+}
+
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn, #sair {
+    background-image: linear-gradient(to right bottom, #031926, #04215b, #009dff);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 30px auto 0;
+    cursor: pointer;
+    display: none;
+    font-size: 2rem;
+}
+
+#sair{
+    display: block;
+    position: absolute;
+    bottom: 5vh;
+}
+
+.correct {
+    background: #58de92;
+}
+
+.incorrect {
+    background: #fc6060;
+}
+
+
+.amostra {
+    flex: 1 1 100vw;
+    background-image:url(../fundo.teste.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#enunciado{
+    color: white;
+    padding: 5PX;
+    margin-top: 130px;
+    border-bottom: rgba(252, 184, 39, 0.866) solid 4px;
+    border-radius: 10px;
+    width: auto;
+    margin-bottom: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box-resultado {
+    height: auto;
+    width: 70vw;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+
+.quiz-amostra {
+    padding: 20px 0;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado li{
+    color: white;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 2px rgba(252, 184, 39, 0.866) solid;
+}
+
+.resultado div ul{
+    display: flex;
+    justify-content:space-around;
+    padding-bottom: 5px;
+
+}
+
