@@ -124,7 +124,7 @@ function mostrarPergunta(indiceJogador) {
             }
 
             document.getElementById('next-btn').style.display = "block";
-            if(pontuacao.includes(1)){
+            if(pontuacao.includes(5)){
                 document.getElementById('next-btn').onclick = results
             }else{
                 document.getElementById('next-btn').onclick = voltar;
