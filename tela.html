@@ -15,6 +15,9 @@
   <h1 id="ganhador"></h1>
   <h1>Clique na garrafa!</h1>
     <img id='garrafa' src="bottle-of-water.svg" alt="">
+    <svg height="220" width="500" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="100,10 150,190 50,190" style="fill:lime;stroke:purple;stroke-width:3" />
+</svg>
     <div id="myPlot" style="width:100vw;height: 100vw;"></div>
     <button id="voltar">voltar</button>
 </div>
@@ -23,6 +26,7 @@
 <div id="telaprincipal">
   <div class="box-questoes">
     <div class="quiz">
+        <h2 id="jogador"></h2>
         <h2 id="pergunta">Pergunta da questão</h2>
         <div id="buttons-resposta">
             <button class="btn">Resposta 1</button>
@@ -78,7 +82,7 @@ const xArray = [];
   
   const layout = {showlegend: false, paper_bgcolor: "#00000000", margin: {"t": 0, "b": 0, "l": 0, "r": 0}, font: {
       family: 'Sans-serif',
-      size: 35,
+      size: 28,
       color: '#7f7f7f'
     }};
   
@@ -102,6 +106,7 @@ const xArray = [];
             };
             let ganhador = nomecertos[parseInt(posgarrafa/(360/xArray.length))]
             document.getElementById("ganhador").innerHTML=ganhador
+            document.getElementById("jogador").innerHTML=ganhador+" responde!"
           }, tempo*1000)
           
           
