@@ -13,12 +13,10 @@
 
 <div class="container">
   <h1 id="ganhador"></h1>
-  <h1>Clique na garrafa!</h1>
-    <img id='garrafa' src="bottle-of-water.svg" alt="">
-    <svg height="220" width="500" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="100,10 150,190 50,190" style="fill:lime;stroke:purple;stroke-width:3" />
-</svg>
-    <div id="myPlot" style="width:100vw;height: 100vw;"></div>
+  <h1>Gire a roleta!</h1>
+    <div id='garrafa'></div>
+    <img id="triangulo" src="red-triangle-transparent-png-9.png"></img>
+    <div id="myPlot" style="width:95vw;height: 95vw;"></div>
     <button id="voltar">voltar</button>
 </div>
 
@@ -112,7 +110,7 @@ const xArray = [];
           
           setTimeout(function(){
             document.querySelector("#telaprincipal").style.display="flex";
-            document.querySelector("#garrafa").style.display = "none"
+            document.querySelector(".container").style.display = "none"
             mostrarPergunta(parseInt(posgarrafa/(360/xArray.length)))
           }, tempo*1000+2000)
         }

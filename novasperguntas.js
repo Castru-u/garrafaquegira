@@ -58,7 +58,7 @@ for(i=1; i<lista.length; i++){
 jogadores.push(lista[i])
     }
     jogadores.push(lista[0])
-let pontuacao = []; // Uma pontuação inicial de 0 para cada jogador
+let pontuacao = [];
 for(let i=0; i < jogadores.length; i++){
     pontuacao.push(0)
 }
@@ -72,7 +72,6 @@ function mostrarPergunta(indiceJogador) {
         botoesResposta[i].innerText = perguntaAleatoria.respostas[i].text;
         botoesResposta[i].style.pointerEvents = "auto";
         botoesResposta[i].onclick = function() {
-            // Highlight the correct and incorrect answers
             for(let j = 0; j < botoesResposta.length; j++) {
                 if(perguntaAleatoria.respostas[j].correct) {
                     botoesResposta[j].style.backgroundColor = "green";
@@ -96,7 +95,7 @@ function mostrarPergunta(indiceJogador) {
                 document.querySelector(".container").style.pointerEvents = "auto";
                 document.querySelector("#telaprincipal").style.display="none";
                 document.getElementById("ganhador").innerHTML="";
-                document.querySelector("#garrafa").style.display = "block";
+                document.querySelector(".container").style.display = "flex";
                 for(let i = 0; i < botoesResposta.length; i++) {
                     botoesResposta[i].style.backgroundColor = "rgba(252, 184, 39, 0.866)"
                     botoesResposta[i].style.color = "rgb(112, 10, 123)";
@@ -125,7 +124,7 @@ function mostrarPergunta(indiceJogador) {
             }
 
             document.getElementById('next-btn').style.display = "block";
-            if(pontuacao.includes(5)){
+            if(pontuacao.includes(1)){
                 document.getElementById('next-btn').onclick = results
             }else{
                 document.getElementById('next-btn').onclick = voltar;
