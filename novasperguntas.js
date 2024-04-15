@@ -84,27 +84,35 @@ function mostrarPergunta(indiceJogador) {
                 };
                 botoesResposta[j].style.pointerEvents = "none";
             }
-            // Update the score
+
             if(perguntaAleatoria.respostas[i].correct) {
                 pontuacao[indiceJogador]++;
                ;
-            } else {
+            }else{
                 ;
             }
             function voltar(){
+                results();
+
+                document.getElementById('sair').onclick = 
+                function(){
                 document.querySelector(".container").style.pointerEvents = "auto";
-                document.querySelector("#telaprincipal").style.display="none";
+                
                 document.getElementById("ganhador").innerHTML="";
                 document.querySelector(".container").style.display = "flex";
                 for(let i = 0; i < botoesResposta.length; i++) {
                     botoesResposta[i].style.backgroundColor = "rgba(252, 184, 39, 0.866)"
                     botoesResposta[i].style.color = "rgb(112, 10, 123)";
                 };
+                document.querySelector("#popup").style.display = "none"
+                document.querySelector("#telaprincipal").style.display="none";
+                document.querySelector(".box-questoes").style.display="flex";}
             }
             function results(){
-                document.querySelector(".box-questoes").style.display = "none";
+                
+                document.querySelector(".box-questoes").style.display="none";
                 document.querySelector("#popup").style.display = "block"
-                let = document.querySelector(".lista-resultado").innerHTML;
+                document.querySelector(".lista-resultado").innerHTML="";
                 function compararDecrescente(a, b) {
                     return b[1] - a[1];
                 }
@@ -117,14 +125,17 @@ function mostrarPergunta(indiceJogador) {
                 items.forEach(function(item) {
                     document.querySelector(".lista-resultado").innerHTML+=`<li><div>${item[0]}</div><div>${item[1]}</div></li>`
                 });
-                function sair(){
-                    window.location.href= 'principal.html'
-                }
-                document.getElementById('sair').onclick = sair;
+                
             }
 
             document.getElementById('next-btn').style.display = "block";
             if(pontuacao.includes(5)){
+                document.getElementById("resultado").innerHTML="Resultado Final";
+                function sair(){
+                    window.location.href= 'principal.html'
+                }
+                document.getElementById('sair').innerHTML="Sair";
+                document.getElementById('sair').onclick = sair;
                 document.getElementById('next-btn').onclick = results
             }else{
                 document.getElementById('next-btn').onclick = voltar;

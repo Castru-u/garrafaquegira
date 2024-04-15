@@ -36,6 +36,33 @@ if(jogadores[i].value.length==0){
 mensagem+=document.getElementById('qtd-jogadores').value
 document.getElementById("jogadores").value=mensagem;
 console.log(mensagem)
+
+let mensagemcerta = mensagem.split("#$#");
+
+function checarep(value){
+    let n = 0;
+    for(i = 0; i < parseInt(mensagemcerta[8]); i++){
+        if(mensagemcerta[i] == value){n++}
+        console.log(value)
+    }
+    return n;
+}
+
+let temrep=false
+for (i=0; i<parseInt(mensagemcerta[8]); i++){
+    if(checarep(mensagemcerta[i])>1){
+        temrep=true
+    }
+    }
+if(temrep==true){
+    document.getElementById("mensagem").style.display="block";
+    document.getElementById("proximo").style.pointerEvents = "none";
+    document.getElementById("proximo").style.filter = "grayscale(100%)";
+}else{
+    document.getElementById("mensagem").style.display="none"; 
+    document.getElementById("proximo").style.pointerEvents = "auto";
+    document.getElementById("proximo").style.filter = "grayscale(0%)";
+}
 }
 
 for(let i of jogadores){
