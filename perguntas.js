@@ -35,6 +35,186 @@ const questoes = [
             { text: "C) Parte física do computador", correct: true},
             { text: "D) Nenhuma alternativa", correct: false},
         ]
+    },
+    {
+        "questao": "Quem foi a primeira pessoa a viajar no Espaço?",
+        "respostas": [
+            { "text": "a) Yuri Gagarin", "correct": true},
+            { "text": "b) A cadela Laika", "correct": false},
+            { "text": "c) Neil Armstrong", "correct": false},
+            { "text": "d) Marcos Pontes", "correct": false}
+        ]
+    },
+    {
+        "questao": "Qual a montanha mais alta do mundo?",
+        "respostas": [
+            { "text": "a) Mauna Kea", "correct": false},
+            { "text": "b) Dhaulagiri", "correct": false},
+            { "text": "c) Monte Chimborazo", "correct": false},
+            { "text": "d) Monte Everest", "correct": true}
+        ]
+    },
+    {
+        "questao": "Onde se localiza Machu Picchu?",
+        "respostas": [
+            { "text": "a) Colômbia", "correct": false},
+            { "text": "b) Peru", "correct": true},
+            { "text": "c) China", "correct": false},
+            { "text": "d) Bolívia", "correct": false}
+        ]
+    },
+    {
+        "questao": "Que país tem o formato de uma bota?",
+        "respostas": [
+            { "text": "a) Butão", "correct": false},
+            { "text": "b) Brasil", "correct": false},
+            { "text": "c) Portugal", "correct": false},
+            { "text": "d) Itália", "correct": true}
+        ]
+    },
+    {
+        "questao": "Quem inventou a lâmpada?",
+        "respostas": [
+            { "text": "a) Graham Bell", "correct": false},
+            { "text": "b) Steve Jobs", "correct": false},
+            { "text": "c) Thomas Edison", "correct": true},
+            { "text": "d) Henry Ford", "correct": false}
+        ]
+    },
+    {
+        "questao": "Quanto tempo a Terra demora para dar uma volta completa em torno dela mesma?",
+        "respostas": [
+            { "text": "a) Aproximadamente 24 horas", "correct": true},
+            { "text": "b) 365 dias", "correct": false},
+            { "text": "c) 7 dias", "correct": false},
+            { "text": "d) 30 ou 31 dias", "correct": false}
+        ]
+    },
+    {
+        "questao": "A que temperatura a água ferve?",
+        "respostas": [
+            { "text": "a) 200 ºC", "correct": false},
+            { "text": "b) -10 ºC", "correct": false},
+            { "text": "c) 0 ºC", "correct": false},
+            { "text": "d) 100 ºC", "correct": true}
+        ]
+    },
+    {
+        "questao": "Quais são as fases da Lua?",
+        "respostas": [
+            { "text": "a) Nova, cheia e superlua", "correct": false},
+            { "text": "b) Penumbral, lunar parcial, lunar total e cheia", "correct": false},
+            { "text": "c) Nova, cheia, minguante e lua de sangue", "correct": false},
+            { "text": "d) Nova, crescente, cheia e minguante", "correct": true}
+        ]
+    },
+    {
+        "questao": "Quantos ossos temos no nosso corpo?",
+        "respostas": [
+            { "text": "a) 126", "correct": false},
+            { "text": "b) 206", "correct": true},
+            { "text": "c) 18", "correct": false},
+            { "text": "d) 300", "correct": false}
+        ]
+    },
+    {
+        "questao": "Qual o maior planeta do sistema solar?",
+        "respostas": [
+            { "text": "a) Marte", "correct": false},
+            { "text": "b) Lua", "correct": false},
+            { "text": "c) Saturno", "correct": false},
+            { "text": "d) Júpiter", "correct": true}
+        ]
+    },
+    {
+        "questao": "Um anel tem 3 pedras preciosas. Quantas pedras preciosas têm 11 anéis?",
+        "respostas": [
+            { "text": "a) 33", "correct": true},
+            { "text": "b) 110", "correct": false},
+            { "text": "c) 333", "correct": false},
+            { "text": "d) 30", "correct": false}
+        ]
+    },
+    {
+        "questao": "Qual o planeta mais próximo do Sol?",
+        "respostas": [
+            { "text": "a) Netuno", "correct": false},
+            { "text": "b) Júpiter", "correct": false},
+            { "text": "c) Mercúrio", "correct": true},
+            { "text": "d) Terra", "correct": false}
+        ]
+    },
+    {
+        "questao": "Quantos continentes existem?",
+        "respostas": [
+            { "text": "a) 2", "correct": false},
+            { "text": "b) 4", "correct": false},
+            { "text": "c) 6", "correct": true},
+            { "text": "d) 3", "correct": false}
+        ]
+    },
+    {
+        "questao": "Qual a maior floresta tropical do mundo?",
+        "respostas": [
+            { "text": "a) Mata Atlântica", "correct": false},
+            { "text": "b) Pampas", "correct": false},
+            { "text": "c) Pantanal", "correct": false},
+            { "text": "d) Floresta Amazônica", "correct": true}
+        ]
+    },
+    {
+        "questao": "Quais as duas línguas mais faladas no mundo?",
+        "respostas": [
+            { "text": "a) Inglês e espanhol", "correct": false},
+            { "text": "b) Inglês e mandarim chinês", "correct": true},
+            { "text": "c) Mandarim chinês e francês", "correct": false},
+            { "text": "d) Inglês e português", "correct": false}
+        ]
+    },
+    {
+        "questao": "Qual o monumento famoso pela sua inclinação?",
+        "respostas": [
+            { "text": "a) Torre Eiffel", "correct": false},
+            { "text": "b) Esfinge", "correct": false},
+            { "text": "c) Torre de Pisa", "correct": true},
+            { "text": "d) Estátua da Liberdade", "correct": false}
+        ]
+    },
+    {
+        "questao": "Kryptonita é a fraqueza de qual super-herói?",
+        "respostas": [
+            { "text": "a) Batman", "correct": false},
+            { "text": "b) Hulk", "correct": false},
+            { "text": "c) Super-Homem", "correct": true},
+            { "text": "d) Capitão América", "correct": false}
+        ]
+    },
+    {
+        "questao": "Quem pintou Mona Lisa?",
+        "respostas": [
+            { "text": "a) Leonardo da Vinci", "correct": true},
+            { "text": "b) Salvador Dalí", "correct": false},
+            { "text": "c) Van Gogh", "correct": false},
+            { "text": "d) Pablo Picasso", "correct": false}
+        ]
+    },
+    {
+        "questao": "O que representam os cinco anéis olímpicos?",
+        "respostas": [
+            { "text": "a) As partes do mundo unidas pelo Olimpismo", "correct": true},
+            { "text": "b) As argolas da ginástica artística", "correct": false},
+            { "text": "c) Cinco tipos de esporte: de rede, de campo, de combate, de precisão, de invasão", "correct": false},
+            { "text": "d) Cinco deuses do Olimpo: Zeus, Atena, Apolo, Dionísio e Hermes", "correct": false}
+        ]
+    },
+    {
+        "questao": "Qual a personagem mais famosa de Maurício de Sousa?",
+        "respostas": [
+            { "text": "a) Mafalda", "correct": false},
+            { "text": "b) Mônica", "correct": true},
+            { "text": "c) Smurfette", "correct": false},
+            { "text": "d) Magali", "correct": false}
+        ]
     }
 ];
 
